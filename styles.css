@@ -63,3 +63,5 @@ input, select, button { max-width: 100%; }
 nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
 header, main, footer { padding-left: 1rem; padding-right: 1rem; }
 @media(min-width:900px){header,footer{padding-left:max(1rem,calc((100vw - 68rem)/2));padding-right:max(1rem,calc((100vw - 68rem)/2))}}
+
+#prices li, #prices li span { color: #0b6e4f; font-weight: 700; }
