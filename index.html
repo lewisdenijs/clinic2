@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Campus Cycle's Saturday repair clinic: bicycle checks, small repairs and full services in Workshop B, Student Centre.">
+  <title>Saturday repair clinic · Campus Cycle</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <p class="brand"><span class="logo" aria-hidden="true"></span>Campus Cycle</p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#info">Clinic</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#book">Book a slot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="info" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Saturday repair clinic</p>
+        <h1>Your bicycle checked, repaired or serviced on a Saturday afternoon.</h1>
+        <p class="when">Saturday, 15:00 to 17:00, Workshop B, Student Centre</p>
+        <p class="lead">Roll in, hand over your bicycle and ride out with it running smoothly. Our volunteers work in half-hour slots, two bicycles at a time.</p>
+        <div class="actions">
+          <a class="button" href="#book">Book a slot</a>
+          <a class="button ghost" href="#prices">See prices</a>
+        </div>
+      </div>
+      <img src="images/bicycle.png" width="800" height="480" alt="Illustration of a bicycle with a yellow saddle, ready for repair">
+    </section>
+
+    <section id="prices">
+      <h2>Prices</h2>
+      <p class="section-intro">Simple, fixed prices. Pay at the workshop.</p>
+      <ul class="prices">
+        <li><span class="amount">EUR 10</span><span class="what">a bicycle check</span></li>
+        <li><span class="amount">EUR 5</span><span class="what">each small repair</span></li>
+        <li><span class="amount">EUR 45</span><span class="what">a full service</span></li>
+      </ul>
+
+      <div class="card estimate">
+        <h3>Estimate your price</h3>
+        <div class="controls">
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service">
+              <option value="10">A check</option>
+              <option value="45">A full service</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="repairs">Number of small repairs</label>
+            <input id="repairs" type="number" min="0" step="1" value="0">
+          </div>
+        </div>
+        <p class="total-line">Your estimate: <output id="total">EUR 10</output></p>
+      </div>
+    </section>
+
+    <section id="book">
+      <h2>Book a slot</h2>
+      <p class="section-intro">Choose one of four half-hour slots.</p>
+      <div class="card">
+        <form id="booking">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="slot">Time slot</label>
+            <select id="slot" name="slot" required>
+              <option>15:00</option>
+              <option>15:30</option>
+              <option>16:00</option>
+              <option>16:30</option>
+            </select>
+          </div>
+          <button type="submit" class="button">Book this slot</button>
+        </form>
+        <p id="message" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Campus Cycle · Personal code: BW-M9PS</p>
+  </footer>
+</body>
+</html>

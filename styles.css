@@ -1,0 +1,65 @@
+*,*::before,*::after{box-sizing:border-box}
+img{max-width:100%;height:auto}
+:root{
+  --ink:#10212b;--muted:#4a5f6a;--bg:#f3f7f8;--card:#fff;--line:#d3e0e4;
+  --teal:#0a6c74;--teal-dark:#074f55;--sun:#f2c230;--radius:14px;
+  font-family:"Avenir Next","Trebuchet MS",Verdana,sans-serif;
+}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;font-size:1.05rem}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+
+header{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding-top:.9rem;padding-bottom:.9rem;background:var(--ink);color:#fff;box-shadow:0 2px 12px rgba(16,33,43,.25)}
+.brand{display:flex;align-items:center;gap:.6rem;margin:0;font-weight:800;font-size:1.2rem;letter-spacing:.01em}
+.logo{width:1.5rem;height:1.5rem;border-radius:50%;border:4px solid var(--sun);box-shadow:inset 0 0 0 3px var(--ink),inset 0 0 0 5px var(--teal)}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav a{color:#dcebee;text-decoration:none;font-weight:600;padding:.3rem 0;border-bottom:3px solid transparent}
+nav a:hover{color:#fff;border-color:var(--sun)}
+
+main{max-width:68rem;margin:0 auto}
+section{padding:3.5rem 0 1rem}
+.hero{display:grid;gap:2.5rem;align-items:center;padding-top:3rem}
+.hero>*{min-width:0}
+@media(min-width:850px){.hero{grid-template-columns:1.05fr .95fr}}
+.eyebrow{margin:0 0 .75rem;color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0 0 1.2rem;letter-spacing:-.02em;overflow-wrap:break-word}
+h2{font-size:clamp(1.7rem,3.5vw,2.2rem);margin:0 0 .4rem;letter-spacing:-.01em}
+h3{font-size:1.35rem;margin:0 0 1rem}
+.when{display:inline-block;margin:0 0 1rem;padding:.55rem 1rem;background:#fff;border-left:6px solid var(--sun);border-radius:6px;font-weight:700;box-shadow:0 1px 4px rgba(16,33,43,.1)}
+.lead{color:var(--muted);max-width:34rem;margin:0 0 1.6rem}
+.section-intro{color:var(--muted);margin:0 0 1.6rem}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero img{width:100%;border-radius:var(--radius);border:3px solid var(--ink);box-shadow:10px 10px 0 var(--teal)}
+
+.button{display:inline-block;background:var(--sun);color:var(--ink);font:inherit;font-weight:800;padding:.8rem 1.5rem;border:3px solid var(--ink);border-radius:10px;text-decoration:none;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.button:hover{transform:translateY(-2px);box-shadow:0 4px 0 var(--ink)}
+.button.ghost{background:transparent}
+
+.prices{display:grid;gap:1.1rem;list-style:none;margin:0 0 2rem;padding:0}
+@media(min-width:650px){.prices{grid-template-columns:repeat(3,1fr)}}
+.prices li{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--teal);border-radius:var(--radius);padding:1.3rem 1.4rem;box-shadow:0 2px 8px rgba(16,33,43,.06)}
+.amount{display:block;font-size:2.2rem;font-weight:800;line-height:1.1;color:var(--teal-dark)}
+.what{color:var(--muted)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;box-shadow:0 2px 8px rgba(16,33,43,.06)}
+.controls{display:grid;gap:1rem}
+@media(min-width:650px){.controls{grid-template-columns:1fr 1fr}}
+form{display:grid;gap:1.1rem}
+.field{display:grid;gap:.4rem;min-width:0}
+label{font-weight:700}
+input[type=text],input[type=number],select{width:100%;font:inherit;padding:.75rem .9rem;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+input:focus,select:focus{border-color:var(--teal);outline:none;box-shadow:0 0 0 3px rgba(242,194,48,.7)}
+.total-line{margin:1.3rem 0 0;padding-top:1.1rem;border-top:1px dashed var(--line);font-size:1.1rem}
+output{display:inline-block;margin-left:.4rem;font-size:1.8rem;font-weight:800;color:var(--teal-dark)}
+#book .card{max-width:34rem}
+form .button{justify-self:start}
+#message{min-height:1.6rem;margin:1rem 0 0;font-weight:700;color:var(--teal-dark)}
+
+footer{margin-top:4rem;padding-top:1.6rem;padding-bottom:1.6rem;background:var(--ink);color:#cfe0e4}
+footer p{margin:0;text-align:center}
+
+input, select, button { max-width: 100%; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+header, main, footer { padding-left: 1rem; padding-right: 1rem; }
+@media(min-width:900px){header,footer{padding-left:max(1rem,calc((100vw - 68rem)/2));padding-right:max(1rem,calc((100vw - 68rem)/2))}}
