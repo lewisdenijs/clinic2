@@ -16,5 +16,7 @@ function showEstimate() {
 }
 
 service.addEventListener('change', showEstimate);
+service.addEventListener('input', showEstimate);
 repairs.addEventListener('input', showEstimate);
+repairs.addEventListener('change', showEstimate);
 showEstimate();
